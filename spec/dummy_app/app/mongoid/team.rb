@@ -44,4 +44,8 @@ class Team
   def color_enum
     ['white', 'black', 'red', 'green', 'blu<e>é']
   end
+  
+  scope :green, -> { where(color: 'red') }
+  scope :red, -> { where(color: 'red') }
+  scope :white, -> { where(color: 'white') }
 end
